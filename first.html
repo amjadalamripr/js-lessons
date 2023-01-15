@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="mytext"></input>
+    <button id="but" onclick="myFunction()">convert</button>
+    <h1 id="result"></h1>
+
+
+<script>
+    //normal
+        function myFunction() {
+        var text = document.getElementById("mytext").value;
+        //uppercase
+        var tex = text.toUpperCase();
+        // //replace o =y
+        var te = tex.replace("O", "Y");
+        //reverse 
+        var t = te;
+        var ft = t.split('').reverse().join('');
+
+        document.getElementById("result").innerHTML = `${tex}<br>${te}<br>${ft}<br>`;
+        // console.log(text,"\n ",tex, "\n ",te, "\n ",ft);
+
+        //----------------------------------------2nd way
+    //     <!-- <script>
+    //         //normal
+    
+    //       //or another way function onclick   
+    // document.getElementById("but").addEventListener("click",function(){
+    //         var text= document.getElementById("mytext").value;
+    //         //uppercase
+    //         var tex= text.toUpperCase();
+    //         // //replace o =y
+    //         var te= tex.replace("O", "Y");
+    //         //reverse 
+    //         var t=te;
+    //         var ft = t.split('').reverse().join('');
+    
+    //         document.getElementById("result").innerHTML=`${tex}<br>${te}<br>${ft}<br>`;
+    //         // console.log(text,"\n ",tex, "\n ",te, "\n ",ft);
+    
+    
+    // // })
+    // </script> -->
+
+
+    }
+</script>
+</body>
+</html>
+
+
+
