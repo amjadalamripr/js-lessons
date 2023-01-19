@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Document</title>
+    <style>
+        body{
+            direction: rtl;
+        }
+        .i{
+            margin-top: 2%;
+            text-align: center;
+            background-color: aquamarine;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="i"> 
+        <label for="width" style="font-weight:bolder; font-size: x-large;">الوزن</label>
+        <br><br>
+        <input type="number" id="width" name="width" placeholder="أدخل وزنك">
+        <br><br>
+        <label for="height" style="font-weight:bolder; font-size: x-large;">الطول</label>
+        <br><br>
+        <input type="number" id="height" name="height" placeholder="أدخل طولك">
+        <br><br>
+        <button onclick="myFunction()" id="cal">حساب</button>
+        <p id="num"></p>
+        <h3 id="read"></h3>
+    </div>
+<script>
+
+function myFunction(){
+    let x = document.getElementById("width").value;
+    let y = document.getElementById("height").value;
+    let result = (x / (y * y));
+    document.getElementById("num").innerHTML=`${result}`;
+    let cat="";
+    switch (true) {
+  
+        case ( result < 18):
+         cat= "نحافة";            
+            break;
+
+            case result >=18 && result <=24.9 :
+            cat = "وزن مثالي";
+            break;
+
+            case result >= 25 && result <= 29.9:
+            cat = "وزن زايد";
+            break;
+
+             case result >= 30 && result <= 34.9:
+            cat = "سمنة درجة أولى";
+            break;
+
+            case result >= 35 && result <= 39.9:
+            cat= "سمنة درجة ثانية";
+            break;
+
+             case result > 40 :
+             cat = "سمنة خطيرة";
+            break;
+            
+    
+        default:
+              cat ="الرجاء إدخال قيم صالحة";
+            break;
+    }
+    document.getElementById("read").innerHTML =cat;
+
+}
+       
+</script>
+</body>
+</html>
