@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <center>
+        <input id="text" name="text" type="text" >
+        <button onclick="push()">submit</button>
+        <button id="pop" >Delete</button>
+        <h3 id="names"></h3>
+        </center>
+</body>
+    <script>
+        
+         var array = ["Amjad"];
+         document.getElementById("names").innerHTML = array;
+
+        function push(){
+            var add=document.getElementById("text").value;
+            var newitem =array.push(add);
+            document.getElementById("names").innerHTML = array;
+        }
+
+        document.getElementById("pop").addEventListener("click", function () {
+        var deleteitem= array.pop();
+        document.getElementById("names").innerHTML = array;
+
+        });
+    </script>
+</html>
