@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <center>
+      <h2>Find the student</h2>
+      <input type="text" id="text" name="text">
+      <input type="submit" id="submit" name="submit" value="search">
+      <h3 id="res"></h3> 
+    </center>
+</body>
+  <script>
+       //print table multiply  10 to 30 
+      //   for(i=1;i<=30;i++){
+      //   var a=(10*i);
+      // document.getElementById("res").innerHTML += ` 10 X  ${i} = ${a} <br>`;
+      //   }
+         
+
+      //-------------------------------------------
+      //print text with out vowel letters 
+
+
+      // document.getElementById("submit").addEventListener("click",function(){
+      //  var text=document.getElementById("text").value;
+      //   // text = text.toLowerCase();
+      //   vowel=["a","u","e","i","o"]
+      //   for(var i of text){
+      //   i= i.toLowerCase();
+      //     if(! vowel.includes(i)){
+      //       document.getElementById("res").innerHTML +=`${i} <br>`;
+
+      //     }
+
+      //   }
+      //   document.getElementById("text").value=" ";
+      // })
+
+      //find student in array
+    //    document.getElementById("submit").addEventListener("click", function () {
+    //       var text = document.getElementById("text").value;
+    //       text = text.toLowerCase();
+    //       var name = ["amjad", "mohammed", "ahmed", "omer", "amera"]
+    //       var foundstudent = false;
+
+
+    //       for (var i = 0; i < name.length; i++) {
+              
+    //           if(text === name[i]){
+    //           foundstudent=true;
+    //           foundstudent=name[i]
+    //            break;
+    //         }}
+
+
+    //     if(foundstudent){
+    //      document.getElementById("res").innerHTML = `${text} is  found <br>`; 
+
+    //         }
+
+    //     else{
+    //     document.getElementById("res").innerHTML += `${text} is Not found <br>`; 
+    //         }
+    //          var text = document.getElementById("text").value=" ";
+    //     }
+    //     )
+//-----------------------------------------------------------2nd way--------------------
+    //     document.getElementById("submit").addEventListener("click", function () {
+    //         var text = document.getElementById("text").value;
+    //         text = text.toLowerCase();
+    //         var name = ["amjad", "mohammed", "ahmed", "omer", "amera"]
+           
+
+
+    //         for (var i = 0; i < name.length; i++) {
+
+    //             if (text === name[i]) {
+    //                 document.getElementById("res").innerHTML = `${text} is  found <br>`;
+                   
+    //                 break;
+    //             }
+            
+
+
+    //         else {
+    //             document.getElementById("res").innerHTML = `${text} is Not found <br>`;
+    //         }
+    //     }
+    //             var text = document.getElementById("text").value = " ";
+
+    // }
+    //     )
+    
+//------------------------------------while loop-----------------
+    document.getElementById("submit").addEventListener("click", function () {
+        var text = document.getElementById("text").value;
+        text = text.toLowerCase();
+        var name = ["amjad", "mohammed", "ahmed", "omer", "amera"]
+
+
+        var i=0;
+        while ( i < name.length) {
+   
+            if (text === name[i]) {
+                document.getElementById("res").innerHTML = `${text} is  found <br>`;
+
+                break;
+            }
+
+
+
+            else {
+                document.getElementById("res").innerHTML = `${text} is Not found <br>`;
+            }
+                 i++;
+        }
+        var text = document.getElementById("text").value ="";
+
+    }
+    )
+
+
+     </script>
+</html>
