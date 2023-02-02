@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <center>
+        <div id="section"></div>
+    </center>
+</body>
+  <script>
+   
+    // for(var i=1;i<=10;i++){
+       
+    // var tit = document.getElementById("section").innerHTML += `<h2> Multiplication of Table ${i} </h2>`;
+
+    // for (var j = 1; j <=10; j++) { 
+
+    //     var result=(i*j);
+    //     document.getElementById("section").innerHTML+=`<h3>${i} x ${j} = ${result} </h3>`
+    // }
+    // document.getElementById("section").innerHTML += `<hr>`
+
+// }
+//-------------------------------reverse function---------------------
+
+    //     function reversefunction(){
+    //         var arr = [10, 20, 30]
+    //         var newarray = []
+    //         for (var i = arr.length-1; i >= 0; i--) {
+               
+    //            newarray.push(arr[i]);
+               
+
+
+    //     }
+    //     return newarray
+    // }
+//--------------------2ndway---------------------------------
+
+    // function reversefunction(arr= [1,2,3]){
+    // var newarray = []
+    // for( i of arr){  //start from 0
+     
+    // newarray.unshift(i)  //unshift add from last index 
+
+     
+    // }
+    //         return newarray
+
+    // }
+    // var array=[10,20,30,40,"amjad"]
+    //     console.log(reversefunction(array))
+
+    function deleteLastChar(word) {
+            // write your code here
+           var newword=""
+            for (var i = 0; i < word.length - 1; i++) {
+                newword +=word[i];
+              
+            }
+            return newword;
+        }
+
+        console.log(deleteLastChar("amjad")); 
+
+     </script>
+</html>
