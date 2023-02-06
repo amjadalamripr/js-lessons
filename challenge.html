@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+         body{
+            background-color: orange;
+         }
+        #btn{
+           margin-top: 20%;
+           background-color: white;
+           border: none;
+           padding: 20px 82px;
+           border-radius: 12px;
+           box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+         display: block;
+    margin-left: auto;
+    margin-right: auto;}
+        </style>
+</head>
+<body>
+    
+        <button id="btn" onclick="myFunction()" >Start</button>
+
+</body>
+
+
+  <script>
+    function myFunction() {
+    var btn = document.getElementById("btn");
+    setInterval(function () {
+    let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    let randomColor2 = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = randomColor;
+        btn.style.backgroundColor =  randomColor2;
+    
+
+    }, 500);
+  }
+     </script>
+</html>
