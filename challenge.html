@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+<body>
+    
+     
+
+</body>
+
+
+  <script>
+     //functions of array 
+
+     //map do operation and return array
+
+     let arr=[10,20,30]
+     let sum=arr.map( function (i){
+       return i+10
+     });
+
+     console.log(sum)
+    
+     //filter compare and return array has condition items 
+        let arr1 = [10, 20, 30]
+          let greater = arr1.filter(function (i) {
+            return i>20 
+          });
+
+          console.log(greater)
+
+          //reduce has two vale province and current return one value
+             let total = [10, 20, 30]
+              let ar = total.reduce(function (i,j) {
+              let r= i +j
+               return r
+              }
+               
+              );
+
+              console.log(ar)
+
+     </script>
+</html>
