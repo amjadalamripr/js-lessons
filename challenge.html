@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-color: rgb(51, 41, 76);
+      }
+      table{
+       margin: 0 auto;
+       margin-top: 20%;
+      text-align: center;
+      border: rgb(227, 220, 255);
+      color: white;
+      width: 30%;
+      border-collapse:separate
+
+
+      }
+    </style>
+   </head>
+<body>
+</body>
+
+
+  <script>
+//object
+ let students=[
+{
+  Firstnmae:"Amjad",
+  Lastname:"Moh",
+  age:24,
+  date:"1999-5-23",
+},
+
+{
+  Firstnmae: "Dalal",
+   Lastname: "Ali",
+   age: 27,
+   date: "2005-5-23",
+
+},{
+   Firstnmae: "Ahmed",
+   Lastname: "ALnaser",
+   age: 20,
+   date: "2007-5-23",
+
+  //  printfull :function (){
+  //   console.log(this.age); thisتعبر عن الاوبجكت الي انا داخله الي هو اسمه ستيدونت م ينفع نكتب الا ذس 
+  //  }
+
+ },{
+  Firstnmae: "Majad",
+  Lastname: "Samer",
+  age: 29,
+  date: "1998-5-23",
+  
+ }
+]  
+
+  document.write(`<table border='10'>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Year</th>
+    
+    
+    
+    `);
+ 
+  for (j of students) {
+
+    document.write(`
+      <tr>
+    
+      <td>${j.Firstnmae +" "+ j.Lastname }</td>
+      <td>${j.age}</td>
+      <td>${j.date}</td>
+      </tr>`);
+     }
+  document.write(`</table>`);
+     </script>
+</html>
