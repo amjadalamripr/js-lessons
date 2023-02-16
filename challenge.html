@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body{
+                  margin: 0%;
+                }
+            .bigcon{
+                  background-color: rgb(34, 34, 91);
+                  height: 40vh;
+                  width: 100vw;  
+                  
+            }
+            
+            
+            
+            .div{
+              height: 30vh;
+              width: 100vw;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .container {
+              text-align: center; /* center the child */
+          }
+          h2 {
+              display: inline-flex; /* keep the background color wrapped tight */
+            
+          }
+          ul{
+            display: inline-flex;
+            
+          }
+          h3{
+            color: white;
+            text-align: center;
+            margin: 0;
+            
+          }
+          li{
+          text-align: center;
+            list-style-type: none;
+          }
+    </style>
+   </head>
+<body>
+
+
+  <div class="bigcon"><!--container for 2 div bex i used flex to center items & i want new line for show text-->
+
+      <div class="div">
+        <input type="text"  onmouseout="mouseOu()" id="t"> <!--mouseout function for if i go out text box will show me the text i was write -->
+        <button onclick="fun()"> إرسال</button> <!--onclick function for crate list items-->
+      </div>
+   <!--for text show-->
+
+   <h3 id ="h3"></h3>
+
+ </div>
+
+
+  <div class="container"><!--anther section-->
+ <h2 id="h2" onmouseover="on()" onmouseout="mouseOut()">الرجاء إدخال الاسم</h2>
+  <ul>
+   <li id="ul" onmouseover="on()" onmouseout="mouseOut()"></li>
+  </ul>
+  </div>
+
+</body>
+
+
+  <script>
+
+
+        function mouseOut() {
+        let ul = document.getElementById("ul").style.backgroundColor = "white"
+        let h = document.getElementById("h2").style.backgroundColor = "white"
+        }
+
+
+        // show text before click on send button 
+          function mouseOu() {
+          let tex = document.getElementById("t").value
+          document.getElementById("h3").innerHTML=tex
+          
+        }
+        
+
+        function on() {
+          let h = document.getElementById("h2").style.backgroundColor = "red"
+          let ul = document.getElementById("ul").style.backgroundColor = "green"
+        }
+
+        function fun() {//onclick crate new items & delete old message
+            let tex = document.getElementById("t").value
+            let lis = document.createElement("li");
+            lis.appendChild(document.createTextNode(tex));
+            document.getElementById("ul").appendChild(lis)
+            
+            let h = document.getElementById("h2").innerHTML=" "//delete old message
+
+        
+          }
+
+
+
+
+  </script>
+</html>
