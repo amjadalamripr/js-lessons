@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         
+    </style>
+   </head>
+    <body>
+        <h1>Amjad</h1>
+        <h1>Mohammed</h1>
+    </body>
+
+
+  <script>
+
+
+
+  let students = [
+    {
+      Firstnmae: "Amjad",
+      Lastname: "Moh",
+      age: 24,
+      date: "1999-5-23",
+    },
+
+    {
+      Firstnmae: "Dalal",
+      Lastname: "Ali",
+      age: 27,
+      date: "2005-5-23",
+
+    }, {
+      Firstnmae: "Ahmed",
+      Lastname: "ALnaser",
+      age: 20,
+      date: "2007-5-23",
+
+      //  printfull :function (){
+      //   console.log(this.age); thisتعبر عن الاوبجكت الي انا داخله الي هو اسمه ستيدونت م ينفع نكتب الا ذس 
+      //  }
+
+    }, {
+      Firstnmae: "Majad",
+      Lastname: "Samer",
+      age: 29,
+      date: "1998-5-23",
+
+    }
+  ]
+
+
+//destructing assignment 
+//يستخدم لاستخراج القيم من الاوبجكت والمصفوفات 
+
+//from object
+
+ let gen=[
+  {
+    gender:'female'
+  }
+ ]
+
+  let {gender}=gen
+      for ({ gender } of gen) {
+  console.log({gender})
+      }
+  //more one object
+  for ({Firstnmae, age } of students) {
+    console.log({Firstnmae})
+  }
+
+
+//from array
+let arr=[10,20,30]
+let [first, second]=arr ///نحدد من وين اجيب القيم 
+console.log(first,second)
+
+
+//---------------------------------json--------------
+//اطار يحمل مجموعة من القيم التي يمكن تمثيلها عن طريق قيمة ومفتاج مثل الاوبجكت 
+//يستخدم لنقل البيانات ويعتبر لغة مشتركة بين العميل والخادم 
+//JSON (JavaScript Object Notation) API هي واجهة برمجة تطبيقات مصممة لتبادل البيانات خفيف الوزن (تنسيق تبادل البيانات المستند إلى النص) بين تطبيقين للكمبيوتر يعملان على نفس الجهاز أو بين أجهزة كمبيوتر مختلفة في مناطق جغرافية مختلفة
+
+
+//pass by value --------
+//إذا قمنا بتغيير قيمة num1 ، فلن يكون لـ num2 أي تأثير نظرًا لأنه يحتوي على مساحة منفصلة خاصة به في الذاكرة والآن لا علاقة له بقيمة num2 نظرًا لأن كلاهما لهما مسافات مختلفة (عنوان) في الذاكرة.
+  let num1 = 70
+  let num2 = num1
+
+  console.log(num1) // 70
+  console.log(num2) // 70
+
+  num1 = 40
+
+  console.log(num1) // 40
+  console.log(num2) // 70
+
+  //pass by reference يتغير المكان ف ذاكرة لانها تشير له يستخدم ف اوبجكت دوال مصفوفات
+let x=[
+  {
+    name:"Amjad"
+  }
+]
+let y=x
+console.log(y)
+
+x.name="Ali"
+//use anther ways to get elments from html by js
+ for (j of document.getElementsByTagName("h1")){
+  // j.innerHTML = "Ahmed"
+  //set
+  j.setAttribute("name", "helloH1");
+//get
+ console.log( j.getAttribute("name"));
+//delete
+  //atribute
+  document.getElementsByTagName("h1")[1].removeAttribute("name")
+
+
+//element
+    let elem = document.getElementsByTagName("h1")[1]
+    elem.parentNode.removeChild(elem);
+ }
+
+  </script>
+</html>
