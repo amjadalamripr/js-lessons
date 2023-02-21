@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!--لتضمين اي مكتبة اولا نستورد المكتبة بشكل اونىين عن طريق cdn
+    
+    او ننزلها باستخدام yarn or cmd
+
+    نروح 
+    1-jq cdn
+    2-copy the script
+    3-paste in head 
+    -->    
+
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <style>
+       div{
+        border:1px solid black
+       }  
+    </style>
+   </head>
+    <body>
+    
+        <center>
+          <div>
+
+            
+          </div>
+        </center>
+        <h1 id="h1">Amjad</h1>
+    </body>
+<script>
+
+
+   
+//write fun by using jq
+
+      $("#h1").on("dblclick",function () {
+          $(this).html("you've very beautiful eyes");
+        });
+
+  </script>
+</html>
